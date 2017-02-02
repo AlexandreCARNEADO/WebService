@@ -43,7 +43,7 @@ public class SystemeAmendesClient {
         result = sa.signaler("AB 123 CD","Clio 3",140);
         System.out.println("Amende n°"+result+"\t enregistrée");
         
-        System.out.println("Listing des amendes de AB 123 CD");
+        System.out.println("\nListing des amendes de AB 123 CD");
         a = sa.lister("AB 123 CD");
         for(int i=0;i<a.length;i++){
         	System.out.println(a[i].toString());
@@ -51,7 +51,7 @@ public class SystemeAmendesClient {
         
         sa.payer(1, "Haddock", "Capitaine");
         
-        System.out.println("Listing des amendes de AB 123 CD");
+        System.out.println("\nListing des amendes de AB 123 CD");
         a = sa.lister("AB 123 CD");
         for(int i=0;i<a.length;i++){
         	System.out.println(a[i].toString());
@@ -59,7 +59,7 @@ public class SystemeAmendesClient {
         
         sa.payer(1, "Sponge","Bob");
         
-        System.out.println("Listing des amendes de AB 123 CD");
+        System.out.println("\nListing des amendes de AB 123 CD");
         a = sa.lister("AB 123 CD");
         for(int i=0;i<a.length;i++){
         	System.out.println(a[i].toString());

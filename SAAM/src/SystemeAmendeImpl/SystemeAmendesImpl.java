@@ -51,7 +51,16 @@ public class SystemeAmendesImpl implements SystemeAmendes {
 		
 		Voiture voiture = new Voiture(immatriculation,"");
 		int compteur = 0;
-		Amende[] amendes = new Amende[2];
+		
+		for(Amende a: listeAmendes){
+			if(a.getImmatriculation().equals(immatriculation)){
+				compteur++;
+			}
+		}
+		
+		Amende[] amendes = new Amende[compteur];
+		
+		compteur = 0;
 		
 		for(Amende a: listeAmendes){
 			if(a.getImmatriculation().equals(voiture.getImmatriculation())){
@@ -72,7 +81,7 @@ public class SystemeAmendesImpl implements SystemeAmendes {
 		
 		for(Amende a: listeAmendes){
 			if(a.getNumero()==numero){
-				Voiture v = new Voiture(a.getImmatriculation(),"");
+				for(Voiture v: listeVoitures)
 				if(v.getProprietaire().getNom().equals(nom) && v.getProprietaire().getPrenom().equals(prenom)){
 					amende = a;
 				}
